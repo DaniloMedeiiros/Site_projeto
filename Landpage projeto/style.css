@@ -25,7 +25,6 @@
   color: black;
 }
 
-/* Estilos CSS para a logo */
 .navbar-logo {
   color: rgb(0, 0, 0);
   font-size: 30px;
@@ -33,38 +32,58 @@
   margin-left: 150px;
 }
 
+.quadrado-inclinado {
+  position:  absolute;
+  width: 60vw; /* 200% da largura da viewport para garantir que o quadrado cubra toda a largura da tela */
+  height: 100vh; /* 100% da altura da viewport */
+  background-color: #3D3232; /* cor de fundo do quadrado */
+  transform-origin: top ; /* definindo o ponto de origem da transformação */
+  transform: rotate(-50deg); /* rotacionando o quadrado em -45 graus */
+  top: 15vh;
+  left: -40vw; /* movendo o quadrado para a esquerda em 50% da largura da viewport */
+  border-radius: 15px;
+  z-index: -1;
+  
+}
+
 .container {
-  position: relative;
-  width: 300px;
-  height: 400px;
-}
-.box {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
+  position: relative; /* Necessário para o posicionamento absoluto da .box dentro do .container */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.5s;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
 }
+
+.box {
+  padding: 25px;
+  height: 280px;
+  border: 5px solid #b8b8b8;
+  background-color: #b8b8b8;
+  width: 12%; /* Ajuste conforme necessário */
+  position: absolute; /* Posicionamento absoluto */
+  right: 0; /* Move a caixa para a direita */
+  top: 300px; /* Desce a caixa um pouco */
+  margin-right: 400px;
+  border-radius: 8px;
+  box-shadow: 3px 4px 8px rgb(0, 0, 0);
+}
+
 .box.orcamento {
   z-index: 2;
-  background-color: #ffffff;
+  background-color: #b3b3b3;
 }
-.box.servicos {
-  z-index: 1;
-  background-color: #333;
-  color: #fff;
-}
+
 .button {
-  padding: 10px 20px;
-  background-color: #5a1;
+  padding: 10px 50px;
+  background-color: #542525;
   color: #fff;
   border: none;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 20px;
+  margin-top: 100px;
+  margin-left: 30px;
+  box-shadow: 2px 3px 8px rgb(0, 0, 0);
+  border-radius: 8px;
 }
   
 #whoare{
@@ -79,6 +98,7 @@
   justify-content: center;
   align-items:center;
   background-color: #333;
+  margin-top: 40%;
 }
 .aboutus h3{
   font-weight: bold;
